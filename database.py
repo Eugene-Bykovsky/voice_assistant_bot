@@ -4,9 +4,10 @@ from config import LOGS, PATH_TO_DB
 
 logging.basicConfig(
     level=logging.INFO,
-    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
+    format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
     filename=LOGS,
-    filemode='a',
+    filemode="a",
+    datefmt="%Y-%m-%d %H:%M:%S"
 )
 
 
@@ -99,4 +100,4 @@ def count_all_limits(user_id, limit_type):
                 return 0
     except Exception as e:
         logging.error(e)
-        return 0
+        return None

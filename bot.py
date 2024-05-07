@@ -11,7 +11,7 @@ from validators import (check_number_of_users, is_gpt_token_limit,
 logging.basicConfig(
     level=logging.INFO,
     format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
-    filename='logs.log',
+    filename=LOGS,
     filemode="a",
     datefmt="%Y-%m-%d %H:%M:%S"
 )
